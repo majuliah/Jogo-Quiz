@@ -15,6 +15,7 @@ public class SeletorDeEnigmas : MonoBehaviour
     public List<string> respostasPossiveis = new List<string>();
     public int index;
     public int indexRespostas;
+    public int pontuacao = 0;
 
     void Start()
     {
@@ -61,10 +62,17 @@ public class SeletorDeEnigmas : MonoBehaviour
         if (TextoBotao.text == lista.listaDeEnigmas[index].respostaCorreta)
         {
             lista.listaDeEnigmas.Remove(lista.listaDeEnigmas[index]);
+            pontuacao++;
             Start();
         }
         else
-            Debug.Log("RESPOSTA ERRADA");
+        {
+            if (pontuacao <= 0)
+                pontuacao = 0;
+            else
+                pontuacao--;
+            Start();   
+        }
     }
     
 }
