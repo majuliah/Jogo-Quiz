@@ -10,8 +10,7 @@ public class SeletorDeEnigmas : MonoBehaviour
     [SerializeField] Text botaoResposta1Texto;
     [SerializeField] Text botaoResposta2Texto;
     [SerializeField] Text botaoResposta3Texto;
-    [SerializeField] Text botaoResposta4Texto;
-    [SerializeField] Text botaoResposta5Texto;
+    [SerializeField] Text pontuacaoTexto;
     public List<string> respostasPossiveis = new List<string>();
     public int index;
     public int indexRespostas;
@@ -19,14 +18,13 @@ public class SeletorDeEnigmas : MonoBehaviour
 
     void Start()
     {
+        pontuacaoTexto.text = pontuacao.ToString();
         index = Random.Range(0, lista.listaDeEnigmas.Count);
         
         //populando a lista respostasPossiveis com as nossas respostas
         respostasPossiveis.Add(lista.listaDeEnigmas[index].respostaCorreta);
         respostasPossiveis.Add(lista.listaDeEnigmas[index].respostaErrada1);
         respostasPossiveis.Add(lista.listaDeEnigmas[index].respostaErrada2);
-        respostasPossiveis.Add(lista.listaDeEnigmas[index].respostaErrada3);
-        respostasPossiveis.Add(lista.listaDeEnigmas[index].respostaErrada4);
         
         //criando um novo índice para pegar um elemento da lista anterior e setar a um botão 
         indexRespostas = Random.Range(0, respostasPossiveis.Count);
@@ -44,14 +42,6 @@ public class SeletorDeEnigmas : MonoBehaviour
         
         botaoResposta3Texto.text = respostasPossiveis[indexRespostas];
         Remove();
-        Randomizar();
-        
-        botaoResposta4Texto.text = respostasPossiveis[indexRespostas];
-        Remove();
-        Randomizar();
-        
-        botaoResposta5Texto.text = respostasPossiveis[indexRespostas];
-        Remove();
         
     }
     public void Remove() => respostasPossiveis.Remove(respostasPossiveis[indexRespostas]);
@@ -63,14 +53,21 @@ public class SeletorDeEnigmas : MonoBehaviour
         {
             lista.listaDeEnigmas.Remove(lista.listaDeEnigmas[index]);
             pontuacao++;
+            pontuacaoTexto.text = pontuacao.ToString();
             Start();
         }
         else
         {
             if (pontuacao <= 0)
+            {
                 pontuacao = 0;
+                pontuacaoTexto.text = pontuacao.ToString();
+            }
             else
+            {
                 pontuacao--;
+                pontuacaoTexto.text = pontuacao.ToString();
+            }
             Start();   
         }
     }

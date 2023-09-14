@@ -9,6 +9,4 @@ public class Enigmas
     [SerializeField] public string respostaCorreta;
     [SerializeField] public string respostaErrada1;
     [SerializeField] public string respostaErrada2;
-    [SerializeField] public string respostaErrada3;
-    [SerializeField] public string respostaErrada4;
 }
