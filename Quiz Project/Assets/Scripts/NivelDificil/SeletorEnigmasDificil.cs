@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GerenciadorDeCenas : MonoBehaviour
+public class SeletorEnigmasDificil : MonoBehaviour
 {
     // Start is called before the first frame update
-    void LoadScene()
+    void Start()
     {
         
     }
