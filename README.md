@@ -2,6 +2,7 @@
 
 <p align="center">
 Jogo em desenvolvimento com o intuito de praticar orientação a objetos. <br/>
+#100DiasDeCodigo💜<br/>
 <a href=""> Acesse o jogo aqui! </a>
 </p>
 
