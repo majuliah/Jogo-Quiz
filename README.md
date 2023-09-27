@@ -13,7 +13,7 @@ Jogo em desenvolvimento com o intuito de praticar orientação a objetos. <br/>
 <br>
 
 <p align="center">
-  <img alt="projeto DevLinks" src="https://github.com/majuliah/RocketSeat-Discover/blob/main/gif.gif?raw=true" width="80%">
+  <img alt="projeto DevLinks" src="https://github.com/majuliah/Jogo-Quiz/blob/main/Quiz%20Project/Assets/Assets/Intro/bigMilhoLogo.png?raw=true" width="100%">
 </p>
 
 ## 👾 Tecnologias Utilizadas:
