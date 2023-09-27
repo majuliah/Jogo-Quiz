@@ -7,7 +7,7 @@ public class GerenciadorDeCenas : MonoBehaviour
 {
     public void Nivel01()
     {
-        SceneManager.LoadScene("NivelFacil");
+        SceneManager.LoadScene("NivelFacil1");
     }    
     public void Menu()
     {
