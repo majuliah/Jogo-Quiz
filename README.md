@@ -1,4 +1,4 @@
-<h1 align="center"> 🌽Show do Big Milho: The Game Quiz </h1>
+<h1 align="center"> ✨Show do Big Milho🌽: The Game Quiz✨ </h1>
 
 <p align="center">
 Jogo em desenvolvimento com o intuito de praticar orientação a objetos. <br/>
@@ -6,9 +6,9 @@ Jogo em desenvolvimento com o intuito de praticar orientação a objetos. <br/>
 </p>
 
 <p align="center">
-  <a href="#-tecnologias-utilizadas">Tecnologias Utilizadas |</a>
-  <a href="#-projeto"> Projeto |</a>
-  <a href="#-status"> Status </a>
+  <a href="#-tecnologias-utilizadas">👾 Tecnologias Utilizadas |</a>
+  <a href="#-projeto">💻 Projeto |</a>
+  <a href="#-status">🛸 Status </a>
 </p>
 <br>
 
