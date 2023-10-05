@@ -18,4 +18,16 @@ public class GerenciadorDeCenas : MonoBehaviour
     {
         SceneManager.LoadScene("Intro");
     }
+    public void Configs()
+    {
+        SceneManager.LoadScene("Configuracoes");
+    }
+    public void Creditos()
+    {
+        SceneManager.LoadScene("Creditos");
+    }
+    public void Dificuldades()
+    {
+        SceneManager.LoadScene("Dificuldades");
+    }
 }
