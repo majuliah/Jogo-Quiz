@@ -1,19 +1,20 @@
-<h1 align="center"> 🌽Show do Big Milho: The Game Quiz </h1>
+<h1 align="center"> ✨Show do Big Milho🌽: The Game Quiz✨ </h1>
 
 <p align="center">
 Jogo em desenvolvimento com o intuito de praticar orientação a objetos. <br/>
+#100DiasDeCodigo💜<br/>
 <a href=""> Acesse o jogo aqui! </a>
 </p>
 
 <p align="center">
-  <a href="#-tecnologias-utilizadas">Tecnologias Utilizadas |</a>
-  <a href="#-projeto"> Projeto |</a>
-  <a href="#-status"> Status </a>
+  <a href="#-tecnologias-utilizadas">👾 Tecnologias Utilizadas |</a>
+  <a href="#-projeto">💻 Projeto |</a>
+  <a href="#-status">🛸 Status </a>
 </p>
 <br>
 
 <p align="center">
-  <img alt="projeto DevLinks" src="https://github.com/majuliah/RocketSeat-Discover/blob/main/gif.gif?raw=true" width="80%">
+  <img alt="projeto DevLinks" src="https://github.com/majuliah/Jogo-Quiz/blob/main/Quiz%20Project/Assets/Assets/Intro/bigMilhoLogo.png?raw=true" width="100%">
 </p>
 
 ## 👾 Tecnologias Utilizadas:
