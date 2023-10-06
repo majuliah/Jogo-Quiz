@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Mime;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SeletorDeEnigmas : MonoBehaviour
@@ -46,7 +48,11 @@ public class SeletorDeEnigmas : MonoBehaviour
     }
     public void Remove() => respostasPossiveis.Remove(respostasPossiveis[indexRespostas]);
     public void Randomizar() => indexRespostas = Random.Range(0, respostasPossiveis.Count);
-    
+
+    public void PegarPontuacao()
+    {
+        var poontuacaoFinal = pontuacao.ToString();
+    }
     public void OnClick(Text TextoBotao)
     {
         if (TextoBotao.text == lista.listaDeEnigmas[index].respostaCorreta)
@@ -55,9 +61,26 @@ public class SeletorDeEnigmas : MonoBehaviour
             pontuacao++;
             pontuacaoTexto.text = pontuacao.ToString();
             Start();
+
+            if (lista.listaDeEnigmas.Count == 1)
+            {
+                lista.listaDeEnigmas.Remove(lista.listaDeEnigmas[index]);
+                pontuacao++;
+                pontuacaoTexto.text = pontuacao.ToString();
+                if (pontuacao >= 2)
+                {
+                    SceneManager.LoadScene("Vitoria");
+                }
+                else
+                {
+                    SceneManager.LoadScene("Derrota");
+                }
+            }
         }
         else
         {
+            lista.listaDeEnigmas.Remove(lista.listaDeEnigmas[index]);
+            
             if (pontuacao <= 0)
             {
                 pontuacao = 0;
@@ -68,7 +91,8 @@ public class SeletorDeEnigmas : MonoBehaviour
                 pontuacao--;
                 pontuacaoTexto.text = pontuacao.ToString();
             }
-            Start();   
+            pontuacaoTexto.text = pontuacao.ToString();
+            Start();
         }
     }
     
