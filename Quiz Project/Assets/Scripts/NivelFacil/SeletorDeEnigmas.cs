@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.Mime;
+using Globals;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class SeletorDeEnigmas : MonoBehaviour
 {
@@ -48,11 +51,7 @@ public class SeletorDeEnigmas : MonoBehaviour
     }
     public void Remove() => respostasPossiveis.Remove(respostasPossiveis[indexRespostas]);
     public void Randomizar() => indexRespostas = Random.Range(0, respostasPossiveis.Count);
-
-    public void PegarPontuacao()
-    {
-        var poontuacaoFinal = pontuacao.ToString();
-    }
+    
     public void OnClick(Text TextoBotao)
     {
         if (TextoBotao.text == lista.listaDeEnigmas[index].respostaCorreta)
@@ -67,12 +66,17 @@ public class SeletorDeEnigmas : MonoBehaviour
                 lista.listaDeEnigmas.Remove(lista.listaDeEnigmas[index]);
                 pontuacao++;
                 pontuacaoTexto.text = pontuacao.ToString();
+
                 if (pontuacao >= 2)
                 {
+                    string dataToKeep = pontuacao.ToString();
+                    Pontos.valueToKeep = dataToKeep;
                     SceneManager.LoadScene("Vitoria");
                 }
                 else
                 {
+                    string dataToKeep = pontuacao.ToString();
+                    Pontos.valueToKeep = dataToKeep;
                     SceneManager.LoadScene("Derrota");
                 }
             }
